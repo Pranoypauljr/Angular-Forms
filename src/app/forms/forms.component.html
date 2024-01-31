@@ -1,0 +1,45 @@
+<form [formGroup]="inputForm" (ngSubmit)="Submit()">
+    <label for="FirstName">First Name:</label>
+    <input type="text"formControlName="FirstName" name="FirstName">
+    <label for="LastName">Last Name:</label>
+    <input type="text" formControlName="LastName" name="LastName">
+    <label for="MiddleName">Middle Name:</label>
+    <input type="text" formControlName="MiddleName" name="MiddleName">
+    <label for="Age">Age:</label>
+    <input type="text" formControlName="Age" name="Age">
+    <div class="gender-sect">
+        <label>Gender:</label>
+        <div class="gender-div">
+            <label class="gender-radio">
+                <input type="radio" formControlName="Gender" value="Male"> Male
+            </label>
+            <label class="gender-radio">
+                <input type="radio" formControlName="Gender" value="Female"> Female
+            </label>
+        </div>
+    </div>
+    <div formGroupName="Address">
+        <b><label for="Address">Address</label></b>
+        <label for="Street">Street:</label>
+        <input type="text" formControlName="Street" name="Street">
+        <label for="Landmark">Landmark:</label>
+        <input type="text" formControlName="Landmark" name="Landmark">
+        <label for="City">City:</label>
+        <input type="text" formControlName="City" name="City">
+        <label for="State">State:</label>
+        <input type="text" formControlName="State" name="State">
+        <label for="ZipCode">Zip Code:</label>
+        <input type="text" formControlName="ZipCode" name="ZipCode">
+        <label for="Country">Country:</label>
+        <input type="text" formControlName="Country" name="Country">
+    </div>
+    <div formArrayName="Hobbies" class="hobbies-sect">
+        <label>Hobbies:</label>
+        <div *ngFor="let control of hobbies.controls; let id = index" [formGroupName]="id" class="hobby-container">
+            <input type="text" [formControl]="getHobbyControl(id)">
+            <button type="button" (click)="remove(id)" class="remove-hobby-button">Remove</button>
+        </div>
+        <button type="button" (click)="add()" class="add-hobby-button">Add Hobby</button>
+    </div>
+    <button type="submit" class="submit-button">Submit</button>
+</form>

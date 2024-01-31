@@ -1,0 +1,64 @@
+form {
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Border for the entire form */
+    border-radius: 5px; /* Optional: Rounded corners for the form */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .gender-sect {
+    margin-bottom: 10px;
+  }
+  
+  .gender-div {
+    display: flex;
+  }
+  
+  .gender-radio {
+    margin-right: 20px;
+  }
+  
+  .hobbies-sect {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .hobby-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .remove-hobby-button {
+    margin-left: 10px;
+  }
+  
+  .add-hobby-button {
+    margin-top: 10px;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
